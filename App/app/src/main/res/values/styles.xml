@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ActionBar.AppTheme</item>
+    </style>
+
+    <style name="ActionBar.AppTheme" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:indeterminateProgressStyle">@style/ActionBarProgressBar.AppTheme</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+    </style>
+
+    <style name="MyActionBarTitleText"
+        parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="ActionBarProgressBar.AppTheme" parent="@android:style/Widget.Holo.ProgressBar.Small">
+        <item name="android:minWidth">28dp</item>
+        <item name="android:maxWidth">28dp</item>
+        <item name="android:minHeight">28dp</item>
+        <item name="android:maxHeight">28dp</item>
+    </style>
+</resources>
