@@ -5,10 +5,12 @@
 ** Login   <chambo_e@epitech.net>
 **
 ** Started on  Thu Jun 19 14:08:34 2014 chambon emmanuel
-** Last update Sun Jul 13 22:41:36 2014 chambon emmanuel
+** Last update Mon Jul 14 16:07:46 2014 chambon emmanuel
 */
 
 #include "rt.h"
+
+/* O_MODEL is the list specific pattern */
 
 int		add_info_obj_app_re(char *line, t_obj *tmp)
 {
@@ -26,6 +28,8 @@ int		add_info_obj_app_re(char *line, t_obj *tmp)
   set_fct_ptr(tmp, 0);
   return (0);
 }
+
+/* OBJ_MODEL is the generic pattern */
 
 int		add_info_obj_app(char *line, t_obj *tmp, int opt)
 {
@@ -56,6 +60,8 @@ int		set_second_obj_app(t_obj *objs, t_obj *tmp, char *line, int opt)
     return (-1);
   return (0);
 }
+
+/* Generic function to add an object to the list */
 
 void		add_obj_app(char *line, t_obj *objs, int opt)
 {

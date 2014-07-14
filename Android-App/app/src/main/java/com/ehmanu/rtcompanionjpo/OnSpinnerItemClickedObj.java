@@ -6,7 +6,7 @@ import android.widget.AdapterView;
 /**
  ** Created by chambo_e on 7/3/14.
  **/
- public class OnSpinnerItemClickedObj implements AdapterView.OnItemSelectedListener {
+class OnSpinnerItemClickedObj implements AdapterView.OnItemSelectedListener {
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         String choice = parent.getItemAtPosition(pos).toString();

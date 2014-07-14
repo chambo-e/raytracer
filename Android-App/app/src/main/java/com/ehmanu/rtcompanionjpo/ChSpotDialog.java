@@ -21,7 +21,7 @@ public class ChSpotDialog extends DialogFragment {
     public static ArrayList<Spot> spots;
 
     private ChSpotDialog(ArrayList<Spot> spot) {
-        this.spots = spot;
+        spots = spot;
     }
 
     public static SpotAdapter spotAdapter;
@@ -40,7 +40,7 @@ public class ChSpotDialog extends DialogFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 FragmentManager fm = getFragmentManager();
-                AddSpot addSpot = AddSpot.newInstance(spots.get(position), spots.indexOf(spots.get(position)), "Change Spot");
+                AddSpot addSpot = AddSpot.newInstance(spots.get(position), spots.indexOf(spots.get(position)));
                 addSpot.show(fm, "add_obj_fragment");
             }
         });

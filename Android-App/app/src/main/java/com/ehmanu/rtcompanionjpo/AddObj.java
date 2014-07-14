@@ -28,7 +28,7 @@ import android.widget.Toast;
     private Spinner Spinner_obj;
     private Spinner Spinner_noise;
     public static final String sep = ";";
-    private String title;
+    private final String title;
     private int pos;
 
     private AddObj(String title) {
@@ -42,12 +42,12 @@ import android.widget.Toast;
         this.pos = pos;
     }
 
-    public static AddObj newInstance(String title) {
-        return new AddObj(title);
+    public static AddObj newInstance() {
+        return new AddObj("Add Object");
     }
 
-    public static AddObj newInstance(Object obj, int pos, String title) {
-        return new AddObj(obj, pos, title);
+    public static AddObj newInstance(Object obj, int pos) {
+        return new AddObj(obj, pos, "Change Object");
     }
 
     @Override

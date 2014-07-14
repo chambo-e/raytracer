@@ -5,10 +5,12 @@
 ** Login   <chambo_e@epitech.net>
 **
 ** Started on  Wed Jun 11 17:25:38 2014 chambon emmanuel
-** Last update Thu Jun 19 14:40:53 2014 chambon emmanuel
+** Last update Mon Jul 14 15:59:32 2014 chambon emmanuel
 */
 
 #include "rt.h"
+
+/* Receive data from the app */
 
 void			recv_from(int socket_app, t_rt *rt)
 {
@@ -28,6 +30,8 @@ void			recv_from(int socket_app, t_rt *rt)
 	return ;
     }
 }
+
+/* Infinite loop to keep the connection with the app */
 
 int				handle_app(int sock, t_rt *rt)
 {
@@ -49,6 +53,8 @@ int				handle_app(int sock, t_rt *rt)
   return (0);
 }
 
+/* Create the local socket, and wait for one app to connect */
+
 void			*init_app(void *data)
 {
   t_rt			*rt;
@@ -63,6 +69,10 @@ void			*init_app(void *data)
     return (NULL);
   return (NULL);
 }
+
+/*
+** Create a thread to handle the connection to the app
+*/
 
 void			mlx_app(t_rt *rt)
 {

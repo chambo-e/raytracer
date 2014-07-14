@@ -21,7 +21,7 @@ public class ChObjDialog extends DialogFragment {
     public static ArrayList<Object> objects;
 
     private ChObjDialog(ArrayList<Object> obj) {
-        this.objects = obj;
+        objects = obj;
     }
     public static ObjectAdapter objectAdapter;
 
@@ -39,7 +39,7 @@ public class ChObjDialog extends DialogFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 FragmentManager fm = getFragmentManager();
-                AddObj addObj = AddObj.newInstance(objects.get(position), objects.indexOf(objects.get(position)), "Change Object");
+                AddObj addObj = AddObj.newInstance(objects.get(position), objects.indexOf(objects.get(position)));
                 addObj.show(fm, "add_obj_fragment");
             }
         });

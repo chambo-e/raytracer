@@ -61,7 +61,7 @@ import android.view.View;
         picker = (ColorPicker) v.findViewById(R.id.picker);
         SVBar svBar = (SVBar) v.findViewById(R.id.svbar);
         picker.addSVBar(svBar);
-        picker.setShowOldCenterColor(false);
+        picker.setShowOldCenterColor();
         int r;
         int g;
         if (getArguments().getBoolean("calling")) {

@@ -5,10 +5,12 @@
 ** Login   <chambo_e@epitech.net>
 **
 ** Started on  Thu Jun 19 14:09:36 2014 chambon emmanuel
-** Last update Sun Jul 13 22:41:26 2014 chambon emmanuel
+** Last update Mon Jul 14 16:09:15 2014 chambon emmanuel
 */
 
 #include "rt.h"
+
+/* S_MODEL is the list specific pattern */
 
 int			add_info_spot_app_str(char *line, t_spot *tmp)
 {
@@ -22,6 +24,8 @@ int			add_info_spot_app_str(char *line, t_spot *tmp)
     return (-1);
   return (0);
 }
+
+/* SPOT_MODEL is the generic pattern  */
 
 int			add_info_spot_app(char *line, t_spot *tmp, int flag)
 {
@@ -47,6 +51,8 @@ int			set_second_spot_app(t_spot *spot, t_spot *tmp, char *line, int flag)
     return (-1);
   return (0);
 }
+
+/* Generic function to add a spot in the list  */
 
 void			add_spot_app(char *line, t_spot *spot, int flag)
 {

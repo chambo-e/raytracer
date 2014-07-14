@@ -25,10 +25,8 @@ public class ConnectService extends IntentService {
 
     public static final String RESPONSE = "response";
     public static final String IPSERV = "ipserv";
-    private static final String TAG = "ConnectService";
     private final static int PORT = 7879;
     private static Socket sock = null;
-    public static String result = null;
 
     public ConnectService() {
         super("ConnectService");
@@ -51,12 +49,6 @@ public class ConnectService extends IntentService {
         Intent i = new Intent("com.ehmanu.rtcompanionjpo");
         i.putExtra(RESPONSE, error);
         sendBroadcast(i);
-    }
-
-    public static boolean is_connected() {
-        boolean ret = sock.isClosed();
-        Log.d("SOCKET", "socket is " + ret);
-        return (ret);
     }
 
     public static void close_socket() {

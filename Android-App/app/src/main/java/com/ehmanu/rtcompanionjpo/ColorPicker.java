@@ -27,6 +27,7 @@ import android.graphics.Shader;
 import android.graphics.SweepGradient;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -576,7 +577,7 @@ public class ColorPicker extends View {
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
+    public boolean onTouchEvent(@NonNull MotionEvent event) {
         getParent().requestDisallowInterceptTouchEvent(true);
 
         // Convert coordinates to our internal coordinate system
@@ -750,10 +751,9 @@ public class ColorPicker extends View {
     /**
      * Set whether the old color is to be shown in the center or not
      *
-     * @param show true if the old color is to be shown, false otherwise
      */
-    public void setShowOldCenterColor(boolean show) {
-        mShowCenterOldColor = show;
+    public void setShowOldCenterColor() {
+        mShowCenterOldColor = false;
         invalidate();
     }
 

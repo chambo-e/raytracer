@@ -19,7 +19,7 @@ import android.widget.Toast;
 
     public static EditText editR, editG, editB;
     private EditText editX, editY, editZ;
-    private String title;
+    private final String title;
     private Spot existing;
     private boolean exist = false;
     private int pos;
@@ -35,12 +35,12 @@ import android.widget.Toast;
         this.pos = pos;
     }
 
-    public static AddSpot newInstance(String title) {
-        return new AddSpot(title);
+    public static AddSpot newInstance() {
+        return new AddSpot("Add Spot");
     }
 
-    public static AddSpot newInstance(Spot spot, int pos, String title) {
-        return new AddSpot(spot, pos, title);
+    public static AddSpot newInstance(Spot spot, int pos) {
+        return new AddSpot(spot, pos, "Change Spot");
     }
 
     @Override

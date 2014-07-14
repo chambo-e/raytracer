@@ -56,7 +56,7 @@ public class MainControlFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getFragmentManager();
-                AddObj addObj = AddObj.newInstance("Add Object");
+                AddObj addObj = AddObj.newInstance();
                 addObj.show(fm, "add_obj_fragment");
             }
         });
@@ -65,7 +65,7 @@ public class MainControlFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getFragmentManager();
-                AddSpot addSpot = AddSpot.newInstance("Add Spot");
+                AddSpot addSpot = AddSpot.newInstance();
                 addSpot.show(fm, "add_obj_fragment");
             }
         });
@@ -112,6 +112,7 @@ public class MainControlFragment extends Fragment {
 
     private class ParseObj extends AsyncTask<String, Void, Boolean> {
 
+        @SuppressWarnings("ConstantConditions")
         @Override
         protected Boolean doInBackground(String... params) {
             String[] objects = params[0].split("\\*");

@@ -5,10 +5,12 @@
 ** Login   <chambo_e@epitech.net>
 **
 ** Started on  Thu Jun 19 14:32:29 2014 chambon emmanuel
-** Last update Thu Jun 19 14:34:01 2014 chambon emmanuel
+** Last update Mon Jul 14 15:56:17 2014 chambon emmanuel
 */
 
 #include "rt.h"
+
+/* Create the local socket and bind it */
 
 int			create_sock_app(struct addrinfo *tmp)
 {
@@ -37,6 +39,8 @@ int			create_sock_app(struct addrinfo *tmp)
   return (sock);
 }
 
+/* Loop through the addrinfo list */
+
 int			socket_app(struct addrinfo *servinfo)
 {
   struct addrinfo	*tmp;
@@ -52,6 +56,8 @@ int			socket_app(struct addrinfo *servinfo)
     }
   return (sock);
 }
+
+/* Create local addrinfo struct */
 
 int			init_socket_app(void)
 {

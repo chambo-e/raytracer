@@ -2,14 +2,10 @@ package com.ehmanu.rtcompanionjpo;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.support.v4.app.FragmentActivity;
 import android.view.Window;
-
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
 public class ControlActivity extends FragmentActivity {
 

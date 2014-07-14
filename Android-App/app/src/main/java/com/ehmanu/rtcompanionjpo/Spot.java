@@ -3,7 +3,7 @@ package com.ehmanu.rtcompanionjpo;
 /**
  * * Created by chambo_e on 7/11/14.
  */
-public class Spot {
+class Spot {
         private float y, x, z;
         private int r;
         private int g;
